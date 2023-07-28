@@ -1,5 +1,5 @@
 <script>    
-import RefDetails from '../components/RefDetails.vue';
+import RefDetails from '@/components/RefDetails.vue';
 
 export default {
     components: { RefDetails }

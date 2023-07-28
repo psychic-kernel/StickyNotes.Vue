@@ -2,19 +2,33 @@
    <form class="todos-form">
         <h3>To Do:</h3>
         <label for="currentDate">Date</label>
-        <input id="currentDate" type="date" name="currentDate"/>
+        <input id="currentDate" type="date" name="currentDate" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)"/>
         <br>
-        <textarea id="enterTodos" cols="23" rows="4"></textarea>
+        <input :value="modelValue" @input="$emit('update:modelValue', $event.target.value)"/>
         <br>
         <button>Post</button>
 
-    </form> 
+    </form>
 </template>
 
-<style>
+<script>
+export default {
+    props: ['modelValue'],
+    emits: ['update:modelValue']
+}
+</script>
+
+
+
+<style scoped>
 .todos-form {
     text-align: center;
     background-color: rgb(213, 228, 225);
+}
+textarea {
+    border: none;
+    background-color: black;
+    color: rgb(73, 197, 46);
 }
 
 </style>

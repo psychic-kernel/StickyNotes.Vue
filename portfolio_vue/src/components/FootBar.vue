@@ -1,6 +1,5 @@
 
 <template>
-    <slot/>
     <div>
         <address>Email@ ∆˚ˆ¬˙©ƒ∂∂@fakemail.org</address>
         <address>1234 ¥¨∆©∂ƒ©∂®</address>

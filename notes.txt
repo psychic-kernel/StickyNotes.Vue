@@ -54,3 +54,6 @@ v-text:
 
 
 Remember to use directives responsibly and securely, especially when dealing with user input or HTML rendering. Always sanitize user input and avoid using v-html unless you are confident that the data is safe to render as raw HTML. Additionally, keep in mind that v-html can increase the risk of Cross-Site Scripting (XSS) attacks, so use it only when necessary and with caution.
+
+
+Already included file name '/Users/michaelrobins/Desktop/VSCode/New_Projects/portfolio_vue/src/components/Navbar.vue.js' differs from file name '/Users/michaelrobins/Desktop/VSCode/New_Projects/portfolio_vue/src/components/NavBar.vue.js' only in casing.

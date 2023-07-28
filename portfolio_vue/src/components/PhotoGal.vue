@@ -1,43 +1,27 @@
 
 
 <script>   
-//import { createClient } from 'pexels';
+
+import EyeballSvg from './EyeballSvg.vue';
 
 
-
-/** Pexels API */
-// /composables
-// const client = createClient('qkT13AZis6dFFtI3wyGmoDOoFa475suJt12Q7nhSF0Ynhp7OWqyytdvU');
-// const apiUrl = 'https://api.pexels.com/v1/';
-// // All requests made with the client will be authenticated
-
-//     fetch(apiUrl)
-// .then( async response => {
-//     // Check if successful.
-//     if(!response.ok){
-//         throw new Error('Network response was not ok');
-//     }
-//     return response.json();
-// })
-// .then( data => {
-//     console.log('Fetched data: ' + data);
-// })
-// .catch( error => {
-//     console.error('fetch error: ' + error);
-// });
-
+export default {
+    components: {EyeballSvg},
+}
 
 
 
 </script>
 <template>
+
     <div class="gallery-container">
         <img src="https://placehold.co/200x200" alt=""/>
         <img src="https://placehold.co/200x200" alt=""/>
         <img src="https://placehold.co/200x200" alt=""/>
+        <div>
+            <eyeball-svg/>
+        </div>
     </div>
-    <slot/>
-
 </template>
 
 <style scoped>

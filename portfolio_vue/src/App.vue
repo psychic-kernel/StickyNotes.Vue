@@ -1,13 +1,12 @@
 
 <script>
 // component imports:
-import NavBar from './components/Navbar.vue';
-import FootBar from './components/FootBar.vue';
-import PhotoGal from './components/PhotoGal.vue';
+import NavBar from '@/components/NavBar.vue';
+import FootBar from '@/components/FootBar.vue';
+import PhotoGal from '@/components/PhotoGal.vue';
 
 // asset import:
 
-const altTxt = "An eyeball in .png format";
 
 export default {
     name: 'App',
@@ -16,26 +15,14 @@ export default {
         FootBar,
         PhotoGal,
     },
-    data(){
-        return {
-            altTxt
-        }
-    }
 };
 </script>
 
 <template>
     
-    <nav-bar/>
-    <photo-gal>
-        hello
-    </photo-gal> 
+    <nav-bar />
 
-    <foot-bar>
-    <!-- <slot/> -->
-    
-    <!-- <slot/> -->
-    </foot-bar>
+    <foot-bar/>
     
 </template>
 
@@ -51,7 +38,7 @@ html, body {
     flex-direction: column;
 }
 h1 {
-    color: rgb(142, 159, 110);
+    color: rgb(139, 234, 171);
 }
 
 </style>
