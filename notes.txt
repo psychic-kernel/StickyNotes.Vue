@@ -57,3 +57,49 @@ Remember to use directives responsibly and securely, especially when dealing wit
 
 
 Already included file name '/Users/michaelrobins/Desktop/VSCode/New_Projects/portfolio_vue/src/components/Navbar.vue.js' differs from file name '/Users/michaelrobins/Desktop/VSCode/New_Projects/portfolio_vue/src/components/NavBar.vue.js' only in casing.
+
+# Store:
+    # state ( data ) 
+    # getters ( computed )
+    # actions ( methods )
+
+# Does the same thing: 
+    <div :class="[isActive ? activeClass : '', errorClass]"></div>
+    <div :class="[{ active: isActive }, errorClass]"></div>
+
+#  Built in APIs / Internal property access 
+    # Best to AVOID.
+    '$' prefix exposes the built-in APIs via the component instance
+    '_'prefix exposes some internal properties 
+
+# Reactive Proxy vs. Original:
+    # Data is made reactive by leveraging JS Proxies
+
+    # In Vue 3:
+        # The original 'const newObject = {}' is left intact and will NOT be made reactive 
+        # Not so with Vue 2
+    #
+    # CODE:
+        export default {
+            data() {
+                return {
+                    someObject: {} # When you access this (1)
+                }
+            },
+            mounted() {
+                const newObject = {} # After assigning it a value. (2)  
+                this.someObject = newObject # 'this.someObject' becomes a reactive proxy of 'newObject' (3)
+
+                # Falsey
+                console.log(newObject === this.someObject)
+            },
+            methods: { # Vue automatically binds 'this' in 'methods:' option. (1.1) 
+                increment: ()=>{
+                    this.thing # NOT necessary
+                }
+            }
+
+        }
+    #
+#
+

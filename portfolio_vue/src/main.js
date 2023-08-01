@@ -1,15 +1,18 @@
 'use strict';
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
-
 import App from './App.vue';
 import router from './router';
+const pinia = createPinia();
+createApp(App)
+.use(pinia)
+.use(router)
+.mount('#app');
+// const app = createApp(App);
 
-const app = createApp(App);
-
-app.use(createPinia());
-app.use(router);
-app.mount('#app');
+// app.use(pinia);
+// app.use(router);
+// app.mount('#app');
 // createApp({
     // setup(){}
 // }).mount(App);

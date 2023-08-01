@@ -7,5 +7,18 @@ export default {
 </script>
 <template>
     <h1>Gallery</h1>
-    <photo-gal/>
+    <photo-gal class="img-gal"/>
 </template>
+
+<style scoped>
+h1 {
+    display: block;
+    position: relative;
+    height: 100%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+.img-gal {
+    top: 1em;
+}
+</style>

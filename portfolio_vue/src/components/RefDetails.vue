@@ -51,10 +51,9 @@
         </li>
         <li>
             13. v-text:<br> 
-            Update the text content of an element with the result of an expression (similar to interpolation <code>{{console.log('Dup')}}</code>)
+            Update the text content of an element with the result of an expression (similar to interpolation )
         </li>
     </ul>
-
 </template>
 
 <style scoped>

@@ -13,9 +13,10 @@
 <style scoped>
     div {
         background-color: rgb(120, 218, 151);
+        display: block;
         position: relative;
         width: 100%;
-        height: 100px;
-        
+        margin-bottom: 0px;
+        height: 50px;
     }
 </style>

@@ -1,0 +1,47 @@
+# Saving notes in LocalStorage Object
+
+export default  {
+	name: ‘App’,
+	data: {
+		title: ’Notes’,
+		note: {
+			text: null,
+			date: null
+		},
+		notes: [{
+			text: ‘Notes’,
+			date: new  Date(Date.now()).toLocaleString()
+		}],
+	},
+	methods: {
+		addNote() {
+			let { text, title } = this.note;
+			if ( text === null ) {
+				return;
+			}
+			this.notes.push({
+				text,	 
+				date: new Date(Date.now()).toLocaleString(),
+			})
+			this.note.text = null
+		},
+		removeNote(index) {
+			this.$delete(this.notes, index)
+		},
+	},
+
+	mounted() {
+		this.$delete(this.notes, index)
+	},
+	watch: {
+		notes: {
+			handler() {
+				localStorage.setItem(
+					‘notes’,
+					JSON.stringify(this.notes)
+				);
+			},
+			deep: true,
+		},
+	},
+}

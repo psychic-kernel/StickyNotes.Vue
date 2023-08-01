@@ -1,0 +1,5 @@
+Black - #11151C
+Dark Blue - #212D40
+Gray Blue - #364156
+Pale Maroon - #7D4E57
+Active Orange - #D66853

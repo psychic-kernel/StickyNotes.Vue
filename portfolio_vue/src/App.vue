@@ -1,64 +1,80 @@
 
 <script>
 // component imports:
-import NavBar from '@/components/NavBar.vue';
+import UtilBar from '@/components/UtilBar.vue';
 import FootBar from '@/components/FootBar.vue';
-import PhotoGal from '@/components/PhotoGal.vue';
-import ToDos from '@/components/ToDos.vue';
-
-// asset import:
+import MousePosition from '@/components/MousePosition.vue';
+import NavBar from '@/components/NavBar.vue';
 
 
+
+// MenuIcon for UtilBar as a slot component.
+import MenuIcon from '@/components/icons/MenuIcon.vue';
+const isActive = null;
 export default {
     name: 'App',
-    components: {
-        NavBar,
-        FootBar,
-        PhotoGal,
-        ToDos,
-    },
     data(){
         return {
-            message: ' '
+            isActive: true // display: block
+        }
+    },
+    components: {
+        FootBar,
+        NavBar,
+        UtilBar,
+        MousePosition,
+        MenuIcon,
+
+    },
+    methods: {
+        showSidebar() {
+            
+            
         }
     }
 }
 </script>
 
 <template>
+    <div class="nav-container">
+        <nav-bar/>
+    </div>
     
-    <nav-bar />
-    <to-dos v-model="message">
-        <span>Preview: {{ message }}  </span>   
-    </to-dos>
-   
+    <mouse-position/>
+        <util-bar>
+            <menu-icon class="menu-comp-icon"
+            @click="showSidebar()"
+            v-if="isActive">
+            </menu-icon>
+
+            <span v-else> Side Bar: {{ isActive }}</span>
+        </util-bar>
     
-    <foot-bar/>
     
+    <foot-bar class="foot"/>
 </template>
 
-<style>
-html, body {
-    height: 100%;
-    margin: 0;
-    background-color: rgb(99, 99, 99);
-    
+<style scoped>
+
+li > .link {
+    font-size: 24pt;
+    margin-top: 1em;
+    color: #D66853
+}
+li > .link:hover {
+    text-decoration: none;
 }
 
-h1 {
-    color: rgb(139, 234, 171);
+.menu-comp-icon {
+    position: relative;
+    display: absolute;
+    z-index: 1;
 }
-h3 {
-    color: rgba(219, 118, 18, 0.725);
+
+.foot {
+    position: relative;
+    display: block;
+    margin-top: 100%; 
 }
-p {
-    font-size: larger;
-    margin: -15px;
-}
-span {
-    background-color: rgb(12, 89, 99);
-    display: inline-block;
-    color: orange;
-    padding: 5px;
-}
+    
 </style>
