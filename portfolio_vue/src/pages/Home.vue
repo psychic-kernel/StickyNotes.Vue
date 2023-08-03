@@ -15,7 +15,6 @@ h1 {
     position: relative;
     width: 30%;
     margin: auto;
-    bottom: .8em;
     
 }
 /* span {

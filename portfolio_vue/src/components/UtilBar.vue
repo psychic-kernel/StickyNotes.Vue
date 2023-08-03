@@ -9,7 +9,6 @@ export default {
     data(){
         return {
             message: null,
-            sidebarActive: null,
         }
     },
     components: { 
@@ -17,6 +16,7 @@ export default {
         CountBtns,
         ToDos, 
     },
+    
 }
 </script>
 <template> <!-- Use conditional rendering to open the util-bar -->
@@ -42,14 +42,13 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Merriweather+Sans:wght@300&display=swap');
 .util-bar {
-    position: absolute;
-    float: left;
+    position: fixed;
     height: 100%;
     width: 55%;
     background-color: #212D40;
     z-index: 1;
     opacity: 90%;
-    display: none;
+    display: block;
 }
 .preview {
     position: relative;

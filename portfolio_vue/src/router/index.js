@@ -10,22 +10,26 @@ const router = createRouter({
         {
             path: '/',
             name: 'home',
-            component: Home
+            component: Home,
+            title: 'Home',
         },
         {
             path: '/about',
             name: 'about',
-            component: About
+            component: About,
+            title: 'About',
         },
         {
-            path: '/dev-ref',
-            name: 'DevRef',
-            component: DevRef
+            path: '/cheatsheet',
+            name: 'cheatSheet',
+            component: DevRef,
+            title: 'Cheat Sheet',
         },
         {
             path: '/gallery',
             name: 'gallery',
-            component: Gallery
+            component: Gallery,
+            title: 'Gallery',
         }
     ]
 });

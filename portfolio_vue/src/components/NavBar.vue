@@ -1,17 +1,24 @@
 <script>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRoute } from 'vue-router';
+// import { onMounted } from '@vue/runtime-core';
 
-//component imports:
+// const route = useRoute();
+
+
 
 </script>
 
-<template class="nav-containe">
-    <router-view></router-view>
+<template>
+    <h1>...</h1>
+    <router-view>
+        <!-- <h1>{{ PgTitle }}</h1> -->
+    
+    </router-view>
     <ul class="navbar">
         <li><router-link class="link" to="/">Home</router-link></li> 
         <li><router-link class="link" to="/about">About</router-link></li>
         <li><router-link class="link" to="/gallery">Gallery</router-link></li>
-        <li><router-link class="link" to="/dev-ref">Cheat Sheet</router-link></li>
+        <li><router-link class="link" to="/cheatsheet">Cheat Sheet</router-link></li>
     </ul>
     
     <!-- <slot/> -->
@@ -31,15 +38,16 @@ import { RouterLink, RouterView } from 'vue-router'
 }
 
 .navbar {
-    position:relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 50px;
     display: flex;
-    /* justify-content: space-evenly;  */
+    justify-content: space-evenly; 
     list-style-type: none;
     background-color: #364156;
-    float: left;
-    /* bottom: 42em; */
-    /* z-index: 1; */
+    
 }
 li > .link {
     font-size: 24pt;

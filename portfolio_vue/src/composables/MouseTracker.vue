@@ -12,8 +12,4 @@ export const useMouse = () => {
     onUnmounted(()=> window.addEventListener("mousemove", update));
     return {x, y};
 }
-
-
-
-
 </script>
