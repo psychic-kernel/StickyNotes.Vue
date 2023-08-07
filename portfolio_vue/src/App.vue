@@ -3,7 +3,7 @@
 // component imports:
 import UtilBar from '@/components/UtilBar.vue';
 import FootBar from '@/components/FootBar.vue';
-import MousePosition from '@/components/MousePosition.vue';
+// import MousePosition from '@/components/MousePosition.vue';
 import NavBar from '@/components/NavBar.vue';
 
 
@@ -15,21 +15,21 @@ export default {
     name: 'App',
     data() {
         return {
-            isActive: menuDefault,
-            // isActive: true,
+            // isActive: menuDefault,
+            isActive: true,
         }
     },
     components: {
         FootBar,
         NavBar,
         UtilBar,
-        MousePosition,
+        // MousePosition,
         MenuIcon,
     },
     methods: {
-        bindClass() {
-            // this.isActive = !this.isActive;
-            // console.log(this.isActive);
+        toggleSidebar() {
+            this.isActive = !this.isActive;
+            console.log(this.isActive);
         
         } 
     },
@@ -37,57 +37,18 @@ export default {
 </script>
 
 <template>
-    <nav-bar/>
-    <mouse-position class="comp-mouse-pos"/>
-    <menu-icon
-    @click="toggleSidebar()">
-
-    </menu-icon>
-    <div 
-        v-if="isActive"
+    <nav-bar class="nav"/>
+    <!-- <mouse-position class="comp-mouse-pos"/> -->
+    <menu-icon class="menu-ico"
+    @click="toggleSidebar()"/>
+    <div v-show="isActive" class="active"
     >
-        <util-bar :class="{'menu-active': 'isActive'}"/>
+        <util-bar />
     </div>
 
-    <div
-        v-if="!isActive">
-        <util-bar :class="{'menu-inactive': 'isActive'}"/>
+    <div v-show="!isActive" class="inactive">
+        <util-bar />
     </div>
-
-
-    <!-- <span style=" display:inline;color: red;">Is Active: {{ isActive }}</span> -->
-
-    <!-- <div v-show="isActive">
-        <menu-icon id="active"
-            @click="toggleSidebar()"
-            :class="{'menu-active': 'isActive'}"
-        />
-
-        <div v-if="isActive" >
-            <util-bar/>
-        </div>
-
-    </div>
-    <div v-if="!isActive">
-        <menu-icon id="inactive"
-            @click="toggleSidebar()"
-            :class="{'menu-inactive': '!isActive'}"/>
-    </div> -->
-
-
-    <!-- <span style="display:inline;color: red;">Is Active: {{ isActive }}</span>
-
-    <menu-icon
-        :class="{'sidebar-active': 'isActive'}"
-        @click="toggleSidebar()"
-    ></menu-icon>
-        <div v-if="isActive" >
-            <util-bar/>
-        </div>  -->
-    
-    <!-- <div v-if="isActive" >
-        <util-bar/>
-    </div> -->
     <foot-bar class="foot"/>
 </template>
 
@@ -99,19 +60,19 @@ export default {
     left: 0;
 
 }
-.menu-active {
+.active {
     position: fixed;
-    top: 25px;
-    left: 20px;
-    /* display: block;
-    z-index: 1; */
+    top: 66px;
+    left: 0px;
+    /* display: block; */
+    z-index: 1; 
     animation-name: openUtil;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
     /* transform: rotate(90deg); */
 }
-.menu-inactive {
+.inactive {
     position: fixed;
     top: 25px;
     left: 25px;
@@ -129,19 +90,21 @@ li > .link:hover {
     text-decoration: none;
 }
 
-/* .comp-menu-icon {
+.menu-ico {
     position: fixed;
-    top: 25px;
-    left: 25px;
-    display: absolute;
-    z-index: 1;
-} */
+    display: block;
+    top: 1.3em;
+    left: 3px;
+}
+.menu-ico:hover {
+    top:1.1em;
+    height: 3em;
+}
 
 .foot {
     position: relative;
     margin-top: 100%; 
 }
-
 @keyframes openUtil {
      /* from {
         

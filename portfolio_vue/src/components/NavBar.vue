@@ -1,5 +1,5 @@
 <script>
-import { RouterLink, RouterView, useRoute } from 'vue-router';
+import { RouterLink, RouterView } from 'vue-router';
 // import { onMounted } from '@vue/runtime-core';
 
 // const route = useRoute();
@@ -9,16 +9,12 @@ import { RouterLink, RouterView, useRoute } from 'vue-router';
 </script>
 
 <template>
-    <h1>...</h1>
-    <router-view>
-        <!-- <h1>{{ PgTitle }}</h1> -->
-    
-    </router-view>
+    <router-view/>
     <ul class="navbar">
         <li><router-link class="link" to="/">Home</router-link></li> 
         <li><router-link class="link" to="/about">About</router-link></li>
         <li><router-link class="link" to="/gallery">Gallery</router-link></li>
-        <li><router-link class="link" to="/cheatsheet">Cheat Sheet</router-link></li>
+        <li><router-link class="link" to="/dev-ref">Cheat Sheet</router-link></li>
     </ul>
     
     <!-- <slot/> -->
@@ -27,15 +23,13 @@ import { RouterLink, RouterView, useRoute } from 'vue-router';
 
 <style >
 /* Need to style the navbar at the top */
-.nav-container {
+/* .nav-container {
     position: fixed;
     display: block;
     width: 100%;
     padding: 5px;
     background-color: rgb(43, 103, 103);
-
-
-}
+} */
 
 .navbar {
     position: fixed;

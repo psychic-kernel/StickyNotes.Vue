@@ -20,10 +20,10 @@ const router = createRouter({
             title: 'About',
         },
         {
-            path: '/cheatsheet',
-            name: 'cheatSheet',
+            path: '/dev-ref',
+            name: 'Dev Ref',
             component: DevRef,
-            title: 'Cheat Sheet',
+            title: 'Dev Ref',
         },
         {
             path: '/gallery',
@@ -34,4 +34,5 @@ const router = createRouter({
     ]
 });
 export default router;
+
 

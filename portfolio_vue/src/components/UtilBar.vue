@@ -1,41 +1,25 @@
 
 
 <script>
-// import MenuIcon from '@/components/icons/MenuIcon.vue';
-import CountBtns from '@/components/CountBtns.vue';
 import ToDos from '@/components/ToDos.vue';
-
+import UtilContainers from '@/components/UtilContainers.vue';
 export default {
-    data(){
-        return {
-            message: null,
-        }
-    },
     components: { 
-        // MenuIcon,
-        CountBtns,
         ToDos, 
+        UtilContainers
     },
     
+   
 }
 </script>
-<template> <!-- Use conditional rendering to open the util-bar -->
+<template> 
     <div>
         <div class="util-bar">
-            <!-- <span class="icon-container"> -->
-                
-                <!-- May need to import the menu-icon into the file that uses it.  -->
-                <!-- <menu-icon/> -->
-            <!-- </span> -->
-            <count-btns class="count-comp"/>
-            <to-dos class="preview"
-            v-model="message"
-            v-model.capitalize="myText">
-            <span>Preview: {{ message }}</span>
-            </to-dos>
+            
+            <util-containers class="util-containers-comp"/>
+            
         </div>
     </div>
-    <slot/>
 </template>
 
 
@@ -50,17 +34,6 @@ export default {
     opacity: 90%;
     display: block;
 }
-.preview {
-    position: relative;
-    display: block;
-    text-align: center;
-    width: 90%;
-    top: 13.5em;
-    margin: auto;
-    border: 1px double red;
-    /* font-family: 'Alegreya', serif;
-    font-family: 'Merriweather Sans', sans-serif; */
-}
 .count-comp {
     position: relative;
     display: block;
@@ -71,6 +44,17 @@ export default {
     display: block;
     top: 1px;
     width: 100%;
+}
+@media screen and (max-width: 600px ){
+    .util-bar {
+        position: fixed;
+        height: 100%;
+        width: 90%;
+        background-color: #212D40;
+        z-index: 1;
+        opacity: 90%;
+        display: block; 
+    }
 }
 
 </style>

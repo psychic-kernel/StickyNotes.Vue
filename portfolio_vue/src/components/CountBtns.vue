@@ -2,8 +2,7 @@
 import { useCounterStore } from '@/stores/counter.js';
 import MinusIcon from '@/components/icons/MinusIcon.vue';
 import PlusIcon from '@/components/icons/PlusIcon.vue';
-
-const counter = useCounterStore();
+const counter =  useCounterStore();
 // counter.$patch({ count: counter.count + 1 });
 
 
@@ -11,24 +10,29 @@ const counter = useCounterStore();
 </script>
 <template>
     <div class="count-container">
-        <!-- Minus  -->
-        <button
+        <!-- <button
             @click="counter.decrement()">
             <minus-icon class="minus"/>
         </button>
         &nbsp;
-        <!-- Plus -->
         <button @click="counter.increment()">
             <plus-icon class="plus"/>
+        </button> -->
+        <button @click="counter.increment()">
+            <font-awesome-icon
+            style="color: #23ddd7;"
+            :icon="['fas', 'plus']"
+             />
         </button>
-        <!-- Display -->
-        <!-- <div class="count-container">
-            Count: {{  counter.count }}
-        </div>  -->
-        <slot>
-            <span>Count: </span>
-            {{ counter.count }}
-        </slot>
+
+        <button @click="counter.decrement()">
+            <font-awesome-icon
+            style="color: #D66853;"
+            :icon="['fas', 'minus']"
+            />
+        </button>
+        <span id="countVar">Count: {{ counter.count }} </span>
+            
     </div>
 </template>
 
@@ -37,7 +41,8 @@ const counter = useCounterStore();
     position: relative;
     display: block;
     border: 3px solid black;
-    width: 5em;
+    width: 16em;
+    height: 5em;
 }
 .plus {
     position: relative;
@@ -52,7 +57,7 @@ const counter = useCounterStore();
     
 }
 button:hover {
-    background-color: #212D40;
+    background-color: #aab9d1;
     
 }
 button {
@@ -60,14 +65,18 @@ button {
     display: block;
     width: 2em;
     height: 2em;
-    margin-left: 5%;
-    font-size: 14pt;
-    border: 1px solid grey;
-    border-radius: 10px;
-    background-color: #D66853;
+    background: transparent;
+    border: none;
+    border-radius: 3px;
+    left: 3em;
     
 }
-    
+.count-container #countVar{
+    /* position: fixed;
+    display: inline;
+    font-size: 3em; */
+    color: orange;
+}
     
 
 </style>

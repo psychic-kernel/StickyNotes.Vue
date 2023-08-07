@@ -7,7 +7,7 @@ export default {
 </script>
 <template>
     <h1>Gallery</h1>
-    <photo-gal class="img-gal"/>
+    <PhotoGal class="img-gal"/>
 </template>
 
 <style scoped>

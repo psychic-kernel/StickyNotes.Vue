@@ -1,52 +1,37 @@
 <template>
-   <div>
-       <form class="todos-form">
-           
+        <form class="todos-form">
+            <legend style="font-size: 1.5em;">Set Tasks</legend>
             <label for="currentDate">Date</label>
-            <!-- <input 
-                id="currentDate" 
-                type="date" 
-                name="currentDate" 
-                :value="modelValue" 
-                @input="$emit('update:modelValue', $event.target.value)"
-            /> -->
-            <input 
-                id="currentDate" 
-                type="date"
-                name="currentDate" 
-                :value="modelValue" 
-                @input="emitValue"
-            />
-                <br> 
-            <legend>Enter Tasks:</legend>
-            <!-- <input 
-                :value="modelValue" 
-                @input="$emit('update:modelValue', $event.target.value)"
-            /> -->
-            <input 
-                type="text" 
-                :value="modelValue"
-                @input="emitValue" 
-            />
-
             <br>
-            <button>&copy;</button><br>
+            <input
+            id="currentDate"
+            type="date"
+            name="currentDate"
+            :value="modelValue"
+            @input="emitValue"
+            />
+            <br>
+
+            <label>Enter Tasks:</label>
+            <br>
+            <input
+            type="text"
+            :value="modelValue"
+            @input="emitValue"
+            />
+            <!-- !finished -->
+            <!-- button -->
+            <button class="btn-icon">
+                <font-awesome-icon 
+                :icon="['fas', 'right-to-bracket']"
+                @click.prevent="postMessage()"/>
+            </button>
         </form>
-        
-        <slot/>  
-   </div>
-    
+            <!-- postMessage() will store the value into a localStorage container. 
+            Retrieve te data from local storage and display it on a new page or secion. Called TaskList.vue -->   
+        <slot/>    
 </template>
-
 <script>
-/** Vue tutorial snip  */
-// export default {
-//     props: ['modelValue'],
-//     emits: ['update:modelValue']
-// }
-
-/** Minor annoyance - Cursor accidentally clicks passed the first position in the ** input box ? array */
-    // Move cursor position to the (0) @input OR @click */
 export default {
     props: {
         modelValue: String,
@@ -62,8 +47,11 @@ export default {
                 value = value.charAt(0).toUpperCase() + value.slice(1);
             }
             this.$emit('update:modelValue', value)
+        },
+        postMessage(){
+
         }
-    }
+    },
     
 }
 </script>
@@ -71,30 +59,44 @@ export default {
 
 
 <style scoped>
+
+.btn-icon {
+    position: relative;
+    display:inline;
+    top: 2em;
+    left: 0;
+    background: transparent;
+    border: none;
+    box-shadow: 3px 3px 0 0;
+    
+    
+}
+.btn-icon:hover {
+    background-color: rgb(100, 86, 86);
+}
 .todos-form {
-    font-size: larger;
+    position: relative;
+    padding: 2em;
     display: flex;
-    justify-content: space-evenly;
-    background-color: rgb(27, 133, 147);
+    flex-direction: column;
+    left: 0;
+    width: 16em;
+}
+.todos-form:hover {
+    cursor: pointer;
+}
+
+#currentDate {
+    /* z-index: -1; */
 }
 
 input {
     border: none;
-    background-color: rgb(227, 238, 154);
+    background-color: rgb(246, 232, 193);
     color: rgb(73, 197, 46);
 }
 
 * {
-   color: orange; 
+   color: #d13434d8; 
 }
-button {
-    border-radius: 10px;
-    border: .1px solid gray;
-    background-color:rgb(38, 156, 64);
-    position: inherit;
-}
-
-
-
-
 </style>

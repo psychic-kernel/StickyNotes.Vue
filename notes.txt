@@ -102,4 +102,25 @@ Already included file name '/Users/michaelrobins/Desktop/VSCode/New_Projects/por
         }
     #
 #
+ADD TO CHEATSHEET: 
+Click: v-on:click or @click
+Double Click: v-on:dblclick or @dblclick
+Mouse Enter: v-on:mouseenter or @mouseenter
+Mouse Leave: v-on:mouseleave or @mouseleave
+Mouse Over: v-on:mouseover or @mouseover
+Mouse Out: v-on:mouseout or @mouseout
+Key Down: v-on:keydown or @keydown
+Key Up: v-on:keyup or @keyup
+Key Press: v-on:keypress or @keypress
+Submit: v-on:submit or @submit
+Focus: v-on:focus or @focus
+Blur: v-on:blur or @blur
+Change: v-on:change or @change
+Input: v-on:input or @input
+Scroll: v-on:scroll or @scroll
+Resize: v-on:resize or @resize
+Context Menu: v-on:contextmenu or @contextmenu
+Touch Start: v-on:touchstart or @touchstart
+Touch End: v-on:touchend or @touchend
+Touch Move: v-on:touchmove or @touchmove
 
