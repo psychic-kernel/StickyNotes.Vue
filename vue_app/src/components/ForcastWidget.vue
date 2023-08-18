@@ -1,10 +1,14 @@
 <template>
     <div class="info-box">
         <span id="time">{{ time }}</span> <br>
-        <span id="city">Boise, Idaho {{ cityLoc }}</span>
+        <span id="city">Boise, Idaho</span>
         <span id="curTemp" >{{ currentTemp }}&deg;</span> <br>
-        <span id="windDir">Wind Direction: {{ windDirection }} &deg;</span><br>
-        <span id="windSpd">Wind Speed: {{ windSpeed }} mph</span>
+        <span style="color: var(--color-babyblue)">Wind Direction: 
+            <p id="windDir"> {{ windDirection }} &deg;</p>
+        </span><br>
+        <span id="windSpd">Wind Speed: 
+            <p style="color: var(--color-fire)">{{ windSpeed }} mph</p>
+        </span>
        
         <!-- weather icons -->
         <!-- <font-awesome-icon :icon="['fas', 'cloud']" /> -->
@@ -75,10 +79,11 @@ export default {
     .info-box {
         position: relative;
         /* display: block; */
+        padding: 5px;
         display: grid;
-        width: 95%;
+        width: 10em;
         height: 100%;
-        border: 1px solid rgb(232, 247, 12);
+        /* border: 1px solid rgb(232, 247, 12); */
         float: left;
 
     }
@@ -91,29 +96,25 @@ export default {
         font-size: 1.3em;
         bottom: 1em;
         left: 5px;
+        margin-bottom: 10px;
         
 
     }
     #time {
         top: 5px;
-        grid-template-columns: 1 / span 1;
-        color: white;
+        color: var(--color-neon-green);
     }
     #city {
-        grid-template-columns: 1 / span 1;
-        color: #759ce4;
+        color: var(--color-babyblue);
     }
     #curTemp {
-        grid-template-columns: 1 / span 1;
         color: #F17105;
     }
     #windDir {
-        grid-template-columns: 1 / span 1;
-        color: #357266;
+        color: var(--color-fire);
     }
     #windSpd {
-        grid-template-columns: 1 / span 1;
-        color: #ECBA82;
+        color: var(--color-babyblue);
     }
 
 </style>

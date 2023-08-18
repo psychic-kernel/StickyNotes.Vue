@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/pages/Home.vue';
 import About from '@/pages/About.vue';
-import DevRef from '@/pages/DevRef.vue';
+import VueDocs from '@/pages/VueDocs.vue';
 import Gallery from '@/pages/Gallery.vue';
 
 const router = createRouter({
@@ -20,10 +20,10 @@ const router = createRouter({
             title: 'About',
         },
         {
-            path: '/dev-ref',
-            name: 'Dev Ref',
-            component: DevRef,
-            title: 'Dev Ref',
+            path: '/vue-docs',
+            name: 'VueDocs',
+            component: VueDocs,
+            title: 'Vue Docs',
         },
         {
             path: '/gallery',

@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "axios": "^1.4.0",
+    "eslint": "^8.39.0",
+    "eslint-plugin-vue": "^9.11.0",
+    "pexels": "^1.4.0",
+    "pinia": "^2.1.6",
+    "prettier": "^2.8.8",
+    "vite": "^4.3.9",
+    "vite-svg-loader": "^4.0.0",
+    "vue-carousel": "^0.18.0",
+    "vue-router": "^4.2.4"
+  }
+}

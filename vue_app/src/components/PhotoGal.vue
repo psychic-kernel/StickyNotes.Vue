@@ -1,65 +1,69 @@
 
 
-<script>   
+<script setup>   
+import { ref, onMounted } from 'vue';
 
-import EyeballSvg from '@/components/EyeballSvg.vue';
-
-
-export default {
-    components: {
-        EyeballSvg
-    },
-}
-
-
+import jsonData from '../assets/unsplash-gallery.json';
 
 </script>
 <template>
-    <eyeball-svg class="eyeball"/>
-    <div class="gallery-container">
-        <img src="https://placehold.co/200x200" alt=""/>
-        <img src="https://placehold.co/200x200" alt=""/>
-        <img src="https://placehold.co/200x200" alt=""/>
-    </div>
+    <ul class="gallery-container">
+        <li class="gallery-item" v-for="photo in jsonData" :key="photo.id">
+            <p class="photo-description">{{ photo.description }}</p>
+            <img :src="photo.url" />
+            <p style="
+            position:relative;
+            bottom:6em;left:5px;
+            color: var(--color-neon-green);">Photo by</p>
+            <span style="
+            position:relative;
+            bottom: 6.5em;">{{ photo.author }}</span>
+            &nbsp;&nbsp;
+        </li>
+    </ul>
 </template>
 
 <style scoped>
-* {
+.photo-description {
+    font-size: 1.2em;
+}
+img {
+    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+    margin-left: 10px;
+    margin-top: 1em;
+}
+.gallery-item {
+    margin-top: 2em;
+}
+p {
+    margin-left: 10px;
+}
+li {
+    bottom: 2em;
+}
+li span {
     position: relative;
-    width: 100%;
-
-    margin: auto;
-    background-color: rgb(195, 126, 126);
+    float: left;
+    margin-bottom: 3em;
+    margin-left: 20px;
+    font-family: var(--font-family-2);
+    color: var(--color-fire);
+    box-shadow: 0px 0px 10px;
+    background-color: var(--color-charcoal);
+    padding: 5px;
 }
 .gallery-container {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style-type: none;
     position: relative;
-    gap: 15px;
-    width: 89.8%;
-    height: 100%;
-    margin: 0%;
+    width: 100%;
+    margin: auto;
+    padding: 3px;
+    color: white;
     /* top: 90%; */
-    overflow:scroll;
-    padding: 25px;
-    background-color: black;
-}
-.eyeball {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    box-shadow: 80px 0px 10px;
-}
-/* div{
-    position: relative;
-    display: grid;
-    grid-template-columns: 185px 185px 185px;
-    gap: 100px;
-} */
-img {
-    position: inherit;
-    left: 1em;
-    padding-top: 15px;
-    padding-bottom: 15px;
 }
 </style>

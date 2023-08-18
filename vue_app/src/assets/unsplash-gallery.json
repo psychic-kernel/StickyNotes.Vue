@@ -1,0 +1,112 @@
+[
+    {
+        "author": "Anne Nygard",
+        "description": "Spiraling snakes around a flying sceptor",
+        "url": "./src/assets/anne-nygard-serpents.jpg"
+    },
+    {
+        "author": "Axp Photography",
+        "description": "Horus and Egyptian caligraphy",
+        "url": "./src/assets/axp-photography-unsplash.jpg"
+    },
+    {
+        "author": "Celine Haeberly",
+        "description": "Eastern traditional monuments",
+        "url": "./src/assets/celine-haeberly-unsplash.jpg"
+    },
+    {
+        "author": "Clay Banks",
+        "description": "Church architecture",
+        "url": "./src/assets/clay-banks-unsplash.jpg"
+    },
+    {
+        "author": "Fineas Anton",
+        "description": "Inside architecture of an old church",
+        "url": "./src/assets/fineas-anton-unsplash.jpg"
+    },
+    {
+        "author": "Florian D Bazac",
+        "description": "Home architecture",
+        "url": "./src/assets/florian-d-bazac-unsplash.jpg"
+    },
+    {
+        "author": "Clay Banks",
+        "description": "Beautiful interior architecture of an old church",
+        "url": "./src/assets/clay-banks-1-unsplash.jpg"
+    },
+    {
+        "author": "Hugues De Buyer Mimeure",
+        "description": "Lone cross overlooking the valley below",
+        "url": "./src/assets/hugues-de-buyer-mimeure-unsplash.jpg"
+    },
+    {
+        "author": "Issac Martin",
+        "description": "Entrance of an old church",
+        "url": "./src/assets/isaac-martin-unsplash.jpg"
+    },
+    {
+        "author": "Josh Eckstein",
+        "description": "Interior of a monastery surrounded by stainglass windows",
+        "url": "./src/assets/josh-eckstein-unsplash.jpg"
+    },
+    {
+        "author": "Kevin Et Laurianne langlais",
+        "description": "Egyption monolith with inscribed ancient text",
+        "url": "./src/assets/kevin-et-laurianne-langlais-unsplash.jpg"
+    },
+    {
+        "author": "Kevin Et Laurianne langlais",
+        "description": "Egyption architecture with inscribed ancient text",
+        "url": "./src/assets/kevin-et-laurianne-langlais-1-unsplash.jpg"
+    },
+    {
+        "author": "Kevin Et Laurianne langlais",
+        "description": "Ancient Egyptian architecture",
+        "url": "./src/assets/kevin-et-laurianne-langlais-2-unsplash.jpg"
+    },
+    {
+        "author": "Lea Kobal",
+        "description": "Interior Egyptian architecture with inscribed ancient text",
+        "url": "./src/assets/lea-kobal-unsplash.jpg"
+    },
+    {
+        "author": "Library of Congress",
+        "description": "Persian looking structure",
+        "url": "./src/assets/library-of-congress-unsplash.jpg"
+    },
+    {
+        "author": "Marvin Meyer",
+        "description": "Giant stone bird eating a building",
+        "url": "./src/assets/marvin-meyer-unsplash.jpg"
+    },
+    {
+        "author": "Max Letek",
+        "description": "Stairway to church",
+        "url": "./src/assets/max-letek-unsplash.jpg"
+    },
+    {
+        "author": "Maximilian Csali",
+        "description": "Elderly women praying",
+        "url": "./src/assets/maximilian-csali-unsplash.jpg"
+    },
+    {
+        "author": "Pablo Rebolledo",
+        "description": "Looking down a swirlly staircase",
+        "url": "./src/assets/pablo-rebolledo-unsplash.jpg"
+    },
+    {
+        "author": "Tushar Mahajan",
+        "description": "European Interior architecture of a monastary",
+        "url": "./src/assets/tushar-mahajan-unsplash.jpg"
+    },
+    {
+        "author": "Zoltan Tasi Ftujso Pyek",
+        "description": "Looking down a swirlly staircase",
+        "url": "./src/assets/maximilian-csali-unsplash.jpg"
+    },
+    {
+        "author": "Zoltan Tasi Ftujso Pyek",
+        "description": "Guard rails to heaven",
+        "url": "./src/assets/zoltan-tasi-ftujso_pyek-unsplash.jpg"
+    }
+]

@@ -1,0 +1,41 @@
+<template>
+  <div>
+    <nav-bar class="nav" />
+    <mouse-position class="comp-mouse-pos" />
+    <menu-icon
+      class="menu-ico"
+      @click="toggleSidebar"
+    />
+    <div v-show="isActive" class="active">
+      <util-bar />
+    </div>
+
+    <div v-show="!isActive" class="inactive">
+      <util-bar />
+    </div>
+    <foot-bar class="foot" />
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+
+import UtilBar from '@/components/UtilBar.vue';
+import FootBar from '@/components/FootBar.vue';
+import MousePosition from '@/components/MousePosition.vue';
+import NavBar from '@/components/NavBar.vue';
+
+import MenuIcon from '@/components/icons/MenuIcon.vue';
+let menuDefault = false;
+
+const isActive = ref(menuDefault);
+
+const toggleSidebar = () => {
+  isActive.value = !isActive.value;
+  console.log(isActive.value);
+};
+</script>
+
+<style scoped>
+/* Your styles remain unchanged */
+</style>

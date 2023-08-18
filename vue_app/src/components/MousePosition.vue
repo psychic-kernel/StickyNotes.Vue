@@ -11,12 +11,13 @@ export default {
 
 </script>
 <template>
-    <div>X: {{ x }} Y: {{ y }}</div>
+    <span>X: {{ x }} Y: {{ y }}</span>
    
 </template>
 <style scoped>
-* {
-    color: #D66853;
+span {
+    color: var(--color-fire);
+    
     
 }
 </style>

@@ -27,7 +27,7 @@ export const getCityStateFromCoords = (latitude, longitude) => {
                         reject(new Error('No results found.'));
                     }
                 } else {
-                    reject(new Error(`Geocoder failed du to: ${status}`));
+                    reject(new Error(`Geocoder failed due to: ${status}`));
                 }
             }
         });

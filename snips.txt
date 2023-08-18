@@ -45,5 +45,17 @@ export default  {
 		},
 	},
 }
-
-v-if="isA
+================================================================
+/** PEXELS - GET API */ 
+// import { createClient } from 'pexels';
+// const client = createClient('qkT13AZis6dFFtI3wyGmoDOoFa475suJt12Q7nhSF0Ynhp7OWqyytdvU');
+// const query = 'Nature';
+// const fetchData = onMounted(()=> {
+//      client.photos.search({query, per_page: 20})
+//      .then(photos => {
+//         photoData.value = photos.photos;
+//         console.log(photoData);
+//      }).catch(error => {
+//         console.log(error.message);
+//      })
+// })
