@@ -1,5 +1,5 @@
 <script>
-import { useMouse } from '@/composables/MouseTracker.vue';
+import { useMouse } from '@/composables/mouseTracker.js';
 
 const  {x, y} = useMouse();
 export default {

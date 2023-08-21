@@ -18,7 +18,7 @@ export default {
     top: 15em;
 }
 h1{
-    position: relative;
+    position: fixed;
     color: var(--color-fire);
     top: 2em;
     left: 50%;

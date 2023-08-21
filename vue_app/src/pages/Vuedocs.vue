@@ -22,7 +22,7 @@ export default {
 
 h1 {
     left: 50%;
-    position: relative;
+    position: fixed;
     top: 2em;
     color: var(--color-fire);
 }

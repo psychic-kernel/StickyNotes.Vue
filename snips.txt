@@ -59,3 +59,71 @@ export default  {
 //         console.log(error.message);
 //      })
 // })
+
+
+################################################################
+# OPTIONS:
+export default {
+    data(){
+        return {
+            newTodo: '',
+            hideCompleted: false,
+            storedTodos: JSON.parse(localStorage.getItem('storedTodos')) || []
+        }
+    },
+    watch: {
+        storedTodos: {  
+            //  still in localStorage "sdfsdfsdf"
+            handler(newTodos){
+                localStorage.setItem('storedTodos', JSON.stringify(newTodos));
+            },
+            deep: true
+        },
+    },
+    computed: {
+        filteredTodos(){
+            return this.hideCompleted ? 
+            this.storedTodos.filter(t => !t.done): this.storedTodos; 
+        },
+        
+    },
+    methods: {
+        addTodo(){
+            // this.todos.push({id: id++, text: this.newTodo, done: false });
+            // this.storeLocally(this.newTodo); 
+            // this.newTodo = '';
+            const newId = this.storedTodos.length > 0 ? this.storedTodos[this.storedTodos.length - 1].id + 1: 1;
+            this.storedTodos.push({id: newId, text: this.newTodo, done: false});
+            this.newTodo = '';
+        },
+        removeTodo(todo){
+            this.storedTodos = this.storedTodos.filter(t => t !== todo);
+        },
+    }
+}
+
+# COMPOSITION: 
+<script setup>
+import { ref, watch } from 'vue'
+
+const newTodo = ref('');
+const hideCompleted = ref(false);
+const storedTodos = ref(JSON.parse(localStorage.getItem('storedTodos')) || []);
+
+watch(storedTodos, (newTodos) => {
+    localStorage.setItem('storedTodos', JSON.stringify(newTodos));
+}, { deep: true });
+
+const addTodo = () => {
+    const newId = storedTodos.value.length > 0 ? storedTodos.value[storedTodos.value.length - 1].id + 1 : 1;
+    storedTodos.value.push({ id: newId, text: newTodo.value, done: false });
+    newTodo.value = '';
+};
+
+const removeTodo = (todo) => {
+    storedTodos.value = storedTodos.value.filter(t => t !== todo);
+};
+
+// Remember to export the variables and functions
+export { newTodo, hideCompleted, storedTodos, addTodo, removeTodo };
+</script>

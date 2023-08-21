@@ -15,7 +15,7 @@ export default {
 
 <style scoped>
 h1 {
-    position: relative;
+    position: fixed;
     top: 2em;
     color: var(--color-fire);
     left: 50%;

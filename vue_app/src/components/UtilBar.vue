@@ -1,16 +1,14 @@
-
-
 <script>
-import ToDos from '@/components/ToDos.vue';
+import CreateNotes from '@/components/CreateNotes.vue';
 import ForcastWidget from '@/components/ForcastWidget.vue';
 import CountBtns from '@/components/CountBtns.vue';
 import CalcNumbers from '@/components/CalcNumbers.vue';
 export default {
     components: { 
-        ToDos,
         ForcastWidget,
         CountBtns,
         CalcNumbers,
+        CreateNotes,
     },
     
    
@@ -21,7 +19,7 @@ export default {
             <forcast-widget/>
             <count-btns/>
             <calc-numbers/> 
-            <to-dos/>
+            <create-notes/>
         </div>
 </template>
 

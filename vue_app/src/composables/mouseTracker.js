@@ -1,4 +1,3 @@
-<script>
 import { ref, onMounted, onUnmounted } from 'vue';
 
 export const useMouse = () => {
@@ -14,4 +13,3 @@ export const useMouse = () => {
     onUnmounted(()=> window.addEventListener("mousemove", update));
     return {x, y};
 }
-</script>

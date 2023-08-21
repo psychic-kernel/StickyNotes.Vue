@@ -45,11 +45,10 @@ export default {
 .navbar {
     position: fixed;
     display: flex;
-    top: 7px;
     width: 100%;
     height: 50px;
-    justify-content: space-between;
-    gap: 10px; 
+    top: 0;
+    gap: 15px; 
     list-style-type: none;
     background-color: var(--bg-color-nav);
     
